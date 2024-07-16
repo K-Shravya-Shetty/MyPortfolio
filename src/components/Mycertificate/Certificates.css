@@ -1,0 +1,38 @@
+
+.mycertificates {
+    padding: 20px;
+  }
+  
+  .mycertificates-title {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .mycertificates-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+  .certificate {
+    flex: 1 1 calc(33.333% - 20px);
+    box-sizing: border-box;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background:black;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+  }
+  
+  .certificate:hover {
+    transform: scale(1.05);
+  }
+  
+  .certificate-image {
+    width: 100%;
+    gap: 20px; 
+    height: auto;
+    border-radius: 10px;
+  }
+  
