@@ -1,0 +1,39 @@
+.mywork {
+    padding: 20px; 
+  }
+  
+  .mywork-title {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .mywork-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; 
+    justify-content: center; 
+  }
+  
+  .project {
+    flex: 1 1 calc(33.333% - 20px);
+    box-sizing: border-box;
+    padding: 10px; 
+    border: 1px solid #ddd;
+    border-radius: 10px; 
+    background-color: black; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    transition: transform 0.2s; 
+  }
+  
+  .project:hover {
+    transform: scale(1.05); 
+  }
+  
+  .project-image {
+    width: 100%;
+    height: auto;
+    border-radius: 10px; 
+  }
+  .project p{
+    color:white;
+  }
