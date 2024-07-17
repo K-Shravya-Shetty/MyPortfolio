@@ -1,7 +1,33 @@
+/* eslint-disable no-undef */
 /* eslint-disable no-unused-vars */
 import React from 'react'
 import './Contact.css'
 const Contact = () => {
+
+  const onSubmit = async (event) => {
+    event.preventDefault();
+    const formData = new FormData(event.target);
+
+    formData.append("access_key", "7539cc20-826d-4688-b01c-2c6cbe685985");
+
+    const object = Object.fromEntries(formData);
+    const json = JSON.stringify(object);
+
+    const res = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json"
+      },
+      body: json
+    }).then((res) => res.json());
+
+    if (res.success) {
+      console.log("Success", res);
+    }
+  };
+
+
   return (
     <div id='contact'className="contact">
       <div className="contact-title">
@@ -23,7 +49,7 @@ const Contact = () => {
                 </div>
             </div>
         </div>
-        <form action="" className="contact-right">
+        <form onSubmit={onSubmit} className="contact-right">
             <label htmlFor="">Your name</label>
             <input type="text" placeholder="Enter your name" name="name"/>
             <label htmlFor="">Your email</label>
