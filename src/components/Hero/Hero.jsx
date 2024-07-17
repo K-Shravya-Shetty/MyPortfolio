@@ -17,7 +17,7 @@ const Hero = () => {
         </a>
         </div>
         <div className="hero-resume">
-        <a href={resume} target="_blank" rel="noopener noreferrer" download={resume}>My resume</a>
+        <a href={resume} target="_blank" rel="noopener noreferrer">My resume</a>
         </div>
       </div>
     </div>
